@@ -1,4 +1,4 @@
-@Price
+@Price @smoke
 Feature: PriceCheck
 
   Scenario: User should be able to see courses if status is publish

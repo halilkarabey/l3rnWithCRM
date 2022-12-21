@@ -42,5 +42,9 @@ public class SessionsAmountChecked extends BasePage{
     @FindBy(xpath = "//span[.='Type']")
     public List<WebElement> viewAllNoAmount;
 
+    @FindBy(xpath = "//span[.='Session Not Avaiable']")
+    public WebElement noSession;
+
+
 
 }

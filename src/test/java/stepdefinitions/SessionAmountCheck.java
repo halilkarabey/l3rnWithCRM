@@ -90,7 +90,7 @@ public class SessionAmountCheck {
                     }
 //
                     System.out.println("mapPublished = " + mapPublished);
-                } else {
+                } else if (allPage.sessionsAmountChecked().noSession.getText().equals("Session Not Avaiable")){
                     listCoursesName.add(allPage.sessionsAmountChecked().nameOfCourse.getText());
                     listAmountSession.add(0);
 //this method is continuing until navigate works properly. then it will be changed

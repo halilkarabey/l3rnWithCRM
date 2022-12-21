@@ -89,9 +89,10 @@ public class StatusCheck {
         for (int i = 0; i < allPage.statusChecked().published.size(); i++) {
             listPublish.add(allPage.statusChecked().published.get(i).getText());
         }
+        Collections.sort(listPublish);
         System.out.println("listPublish = " + listPublish);
         System.out.println("Publish Courses amount at crm = " + listPublish.size());
-        Collections.sort(listPublish);
+
     }
 
     @And("user goes to {string} for leo")
@@ -120,12 +121,14 @@ public class StatusCheck {
         for (int i = 0; i < allPage.statusChecked().leoCourses.size(); i++) {
             listLeo.add(allPage.statusChecked().leoCourses.get(i).getText());
         }
-        System.out.println("Amount of courses at leo = " + listLeo.size());
         Collections.sort(listLeo);
+        System.out.println("Amount of courses at leo = " + listLeo.size());
+        System.out.println("listLeo = " + listLeo);
     }
 
     @Then("user checks courses visibility if it is publish at CRM")
     public void user_checks_courses_visibility_if_it_is_publish_at_crm() {
+
         if (listPublish.size() == listLeo.size()) {
             for (String each : listLeo) {
                 if (listPublish.contains(each)) {

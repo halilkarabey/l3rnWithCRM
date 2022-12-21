@@ -14,6 +14,7 @@ public class AllPage {
     private CourseOutline courseOutline;
     private Price price;
 
+
     public StatusChecked statusChecked() {
         if (statusChecked == null) {
             statusChecked = new StatusChecked();
